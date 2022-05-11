@@ -88,8 +88,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   _sendNotification(
                       'Hello Gift', 'My first flutter notification!');
                 },
+                style: ButtonStyle(
+                    foregroundColor: MaterialStateProperty.resolveWith(
+                        (states) => Colors.black),
+                    backgroundColor: MaterialStateProperty.all(Colors.blue)),
                 icon: const Icon(Icons.notifications_active),
-                label: const Text('Press Here'))
+                label: const Text('Simple Notification')),
           ],
         ),
       ),
